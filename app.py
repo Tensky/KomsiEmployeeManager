@@ -14,8 +14,8 @@ if ENV == 'dev':
 else:
     app.debug = False
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ougnrugttymzmj' \
-                                            ':fa0206554316f9af88305ab67ee3ce4c0df86bb663d8f8048187510738955ac3@ec2' \
-                                            '-174-129-255-72.compute-1.amazonaws.com5432/dctlbiti5t1jfh '
+                                            ':fa0206554316f9af88305ab67ee3ce4c0df86bb663d8f8048187510738955ac3@' \
+                                            'ec2-174-129-255-72.compute-1.amazonaws.com:5432/dctlbiti5t1jfh'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
