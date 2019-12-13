@@ -27,7 +27,7 @@ def create_app():
 
     from main import main as main_blueprint
     app.register_blueprint(main_blueprint)
-    app.run(debug=True, port="8000")
+    app.run(port="8000")
     return app
 
 
