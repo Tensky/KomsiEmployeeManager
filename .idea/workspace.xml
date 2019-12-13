@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa67d155-964f-454d-8d47-c8a693b600be" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,7 +104,7 @@
       <workItem from="1575892601814" duration="46000" />
       <workItem from="1576230184914" duration="9145000" />
       <workItem from="1576244434520" duration="84000" />
-      <workItem from="1576244549276" duration="395000" />
+      <workItem from="1576244549276" duration="2812000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 app = Flask(__name__)
-ENV = 'prod'
+ENV = 'dev'
 
 
 def create_app():
@@ -27,9 +27,12 @@ def create_app():
 
     from main import main as main_blueprint
     app.register_blueprint(main_blueprint)
-    app.run(port="8000")
+
+    print("HALLO")
+    if __name__ == "__main__":
+        app.run(port="8000")
+
     return app
 
 
-if __name__ == "__main__":
-    create_app()
+create_app()
