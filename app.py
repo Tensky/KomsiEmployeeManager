@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 app = Flask(__name__)
-ENV = 'dev'
+ENV = 'prod'
 
 
 def create_app():
