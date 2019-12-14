@@ -1,29 +1,18 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, session
 from app import db
+from models import EmployeeModel
 
 main = Blueprint('main', __name__)
 
 
-class EmployeeModel(db.Model):
-    __tablename__ = 'data'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(200))
-    email = db.Column(db.String(100))
-    address = db.Column(db.String(500))
-    phone = db.Column(db.String(20))
-
-    def __init__(self, name, email, address, phone):
-        self.name = name
-        self.email = email
-        self.address = address
-        self.phone = phone
-
-
 @main.route('/')
 def index():
-    data = db.session.query(EmployeeModel).all()
-    print(data)
-    return render_template('home.html', data=data)
+    if session.get("loged_in"):
+        data = db.session.query(EmployeeModel).all()
+        print(data)
+        return render_template('home.html', data=data)
+    else:
+        return redirect("login")
 
 
 @main.route('/add_employee/', methods=["POST"])

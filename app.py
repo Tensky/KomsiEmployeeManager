@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, session
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
 app = Flask(__name__)
-ENV = 'prod'
+ENV = 'dev'
 
 
 def create_app():
@@ -24,13 +24,11 @@ def create_app():
     # Blueprint
     from auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
-
     from main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    print("HALLO")
     if __name__ == "__main__":
-        app.run(port="8000")
+        app.run(port="8000", debug=True)
 
     return app
 
